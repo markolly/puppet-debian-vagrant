@@ -1,0 +1,14 @@
+{
+  "name": "puppet-vagrant",
+  "version": "0.1.0",
+  "author": "markolly",
+  "summary": "Initial configuration for Vagrant boxs using Virtualbox",
+  "source": "https://github.com/markolly/puppet-vagrant",
+  "project_page": "https://github.com/markolly/puppet-vagrant",
+  "issues_url": "https://github.com/markolly/puppet-vagrant/issues",
+  "dependencies": [
+    { "name": "puppetlabs-stdlib" },
+    { "name": "puppetlabs/maestrodev-wget" }
+  ],
+  "data_provider": null
+}
