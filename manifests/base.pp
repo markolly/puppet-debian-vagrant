@@ -19,7 +19,7 @@ class vagrant::base {
           content => $set_timezone,
           notify  => Exec['update timezone'];
         }
-        exec { 'apt-get update':
+        exec { 'apt update':
           command => 'apt update';
         }
         package { $packages:
