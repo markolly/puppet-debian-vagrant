@@ -1,4 +1,4 @@
-# puppet-cms
+# puppet-debian-vagrant
 Puppet module to provide initial configuration for Debian based Vagrant boxes running on Virtualbox
 
 ## Installation
