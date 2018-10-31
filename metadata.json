@@ -3,12 +3,13 @@
   "version": "0.1.0",
   "author": "markolly",
   "summary": "Initial configuration for Vagrant boxes using Virtualbox",
+  "license": "Apache-2.0",
   "source": "https://github.com/markolly/puppet-vagrant",
   "project_page": "https://github.com/markolly/puppet-vagrant",
   "issues_url": "https://github.com/markolly/puppet-vagrant/issues",
   "dependencies": [
-    { "name": "puppetlabs-stdlib" },
-    { "name": "puppetlabs/maestrodev-wget" }
+    { "name": "puppetlabs-stdlib", "version_requirement": ">= 1.0.0" },
+    { "name": "puppetlabs/maestrodev-wget", "version_requirement": ">= 0" }
   ],
   "data_provider": null
 }

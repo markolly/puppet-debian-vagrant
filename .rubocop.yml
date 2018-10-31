@@ -1,0 +1,9 @@
+AllCops:
+  Excludes:
+    - Gemfile
+    - Rakefile
+    - Puppetfile
+
+#Customize rules
+Metrics/BlockLength:
+  Enabled: false

@@ -4,6 +4,8 @@
 #
 class vagrant::ssh {
 
+  include wget
+  
   # SSH daemon configuration.
   file { '/etc/ssh/sshd_config':
     ensure => present,

@@ -4,26 +4,19 @@
 #
 class vagrant::vboxguest {
 
+  include wget
+  
   Exec { path => [ '/bin/', '/sbin/' , '/usr/bin/', '/usr/sbin/' ] }
 
-  $virtualbox_version = generate('/bin/cat', '/home/vagrant/.vbox_version')
-
-  case $::osfamily {
-      /Debian/: {
-
-        exec { 'Ensure correct kernel headers are installed':
-          command => "apt -y install linux-headers-$(uname -r)",
-        }
-
-      } default: {
-
-        exec { 'Ensure correct kernel headers are installed':
-          command => "yum -y install linux-headers-$(uname -r)",
-        }
-
-      }
+  if file('/home/vagrant/.vbox_version', '/dev/null') != '' {
+    $virtualbox_version = generate('/bin/cat', '/home/vagrant/.vbox_version')
   }
-
+  else {
+    $virtualbox_version = '5.1.20'
+  }
+  exec { 'Ensure correct kernel headers are installed':
+    command => "apt -y install linux-headers-$(uname -r)",
+  }
   exec { 'Create /media/VBoxGuestAdditions':
     command => 'mkdir -p /media/VBoxGuestAdditions',
     creates => '/media/VBoxGuestAdditions',
