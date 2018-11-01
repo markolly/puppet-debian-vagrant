@@ -11,7 +11,6 @@ describe 'vagrant::base' do
   end
   it { should contain_class('vagrant::base') }
   it { should compile }
-
   it do
     should contain_exec('apt update').with(
       command: 'apt update'
