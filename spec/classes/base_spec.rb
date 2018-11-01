@@ -3,9 +3,9 @@ describe 'vagrant::base' do
   let(:facts) do
     {
       kernel: 'Linux',
-      operatingsystem: 'Ubuntu',
-      operatingsystemmajrelease: '16.04',
-      operatingsystemrelease: '16.04',
+      operatingsystem: 'Debian',
+      operatingsystemmajrelease: '9',
+      operatingsystemrelease: '9',
       osfamily: 'Debian'
     }
   end
