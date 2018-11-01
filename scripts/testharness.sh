@@ -39,10 +39,10 @@ function rubocopTests {
 }
 
 function specTests {
-	log "RUNNING SPEC TESTS"
-	rake spec
+	log "RUNNING RELEASE CHECKS"
+	rake release_checks
 	if [ "$?" -ne 0 ]; then
-    		log "SPEC TESTS FAILED"
+    		log "RELEASE CHECKS FAILED"
 				gitPopStash
     		exit 1
 	fi
