@@ -12,7 +12,7 @@ class debian_vagrant::vboxguest {
     $virtualbox_version = generate('/bin/cat', '/home/vagrant/.vbox_version')
   }
   else {
-    $virtualbox_version = '5.1.20'
+    $virtualbox_version = '5.2.20'
   }
   exec { 'Ensure correct kernel headers are installed':
     command => "apt -y install linux-headers-$(uname -r)",

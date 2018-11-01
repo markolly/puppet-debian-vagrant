@@ -28,7 +28,7 @@ describe 'debian_vagrant::vboxguest' do
     should contain_exec('Mount VBoxGuestAdditions')
       .with(
         command: "mount -o loop,ro \
-                /home/vagrant/VBoxGuestAdditions_5.1.20.iso \
+                /home/vagrant/VBoxGuestAdditions_5.2.20.iso \
                 /media/VBoxGuestAdditions"
       )
   end
@@ -40,7 +40,7 @@ describe 'debian_vagrant::vboxguest' do
       )
   end
   it do
-    should contain_file('/home/vagrant/VBoxGuestAdditions_5.1.20.iso')
+    should contain_file('/home/vagrant/VBoxGuestAdditions_5.2.20.iso')
       .with(
         ensure: 'absent'
       )
