@@ -4,7 +4,7 @@
 #
 class debian_vagrant::base {
 
-  Exec { path => [ '/bin/', '/sbin/' , '/usr/bin/', '/usr/sbin/' ] }
+  Exec({ path => [ '/bin/', '/sbin/' , '/usr/bin/', '/usr/sbin/' ] })
 
   file { '/etc/timezone':
     content => 'Europe/London',

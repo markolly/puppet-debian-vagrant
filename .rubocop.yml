@@ -3,8 +3,6 @@ AllCops:
     - Gemfile
     - Rakefile
     - Puppetfile
-  Include:
-    - 'manifests/*.pp'
 
 #Customize rules
 Metrics/BlockLength:
