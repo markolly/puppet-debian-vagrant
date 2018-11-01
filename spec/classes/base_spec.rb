@@ -12,24 +12,28 @@ describe 'vagrant::base' do
   it { should contain_class('vagrant::base') }
   it { should compile }
   it do
-    should contain_exec('apt update').with(
-      command: 'apt update'
-    )
+    should contain_exec('apt update')
+      .with(
+        command: 'apt update'
+      )
   end
   it do
-    should contain_exec('update timezone').with(
-      command: 'dpkg-reconfigure -f noninteractive tzdata'
-    )
+    should contain_exec('update timezone')
+      .with(
+        command: 'dpkg-reconfigure -f noninteractive tzdata'
+      )
   end
   it do
-    should contain_file('/etc/timezone').with(
-      content: 'Europe/London',
-      notify: 'Exec[update timezone]'
-    )
+    should contain_file('/etc/timezone')
+      .with(
+        content: 'Europe/London',
+        notify: 'Exec[update timezone]'
+      )
   end
-  ['htop','tree','unzip','vim'].each do |x| it { 
-    should contain_package(x)
-      .with(ensure: 'present')
+  %w[htop tree unzip vim].each do |x|
+    it {
+      should contain_package(x)
+        .with(ensure: 'present')
     }
   end
 end

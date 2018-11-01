@@ -29,8 +29,9 @@ class vagrant::vboxguest {
     nocheckcertificate => true,
   } ->
   exec { 'Mount VBoxGuestAdditions':
-    command => "mount \
-      -o loop,ro /home/vagrant/VBoxGuestAdditions_${virtualbox_version}.iso /media/VBoxGuestAdditions",
+    command => "mount -o loop,ro \
+                /home/vagrant/VBoxGuestAdditions_${virtualbox_version}.iso \
+                /media/VBoxGuestAdditions",
   } ->
   exec { 'Install VBoxGuestAdditions':
     command => "sh /media/VBoxGuestAdditions/VBoxLinuxAdditions.run",
