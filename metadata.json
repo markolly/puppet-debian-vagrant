@@ -1,12 +1,12 @@
 {
-  "name": "puppet-debian-vagrant",
+  "name": "puppet-debian_vagrant",
   "version": "0.2.0",
   "author": "markolly",
   "summary": "Initial configuration for Vagrant boxes using Virtualbox",
   "license": "Apache-2.0",
-  "source": "https://github.com/markolly/puppet-debian-vagrant",
-  "project_page": "https://github.com/markolly/puppet-debian-vagrant",
-  "issues_url": "https://github.com/markolly/puppet-debian-vagrant/issues",
+  "source": "https://github.com/markolly/puppet-debian_vagrant",
+  "project_page": "https://github.com/markolly/puppet-debian_vagrant",
+  "issues_url": "https://github.com/markolly/puppet-debian_vagrant/issues",
   "data_provider": null,
   "dependencies": [
     { "name": "puppetlabs-stdlib", "version_requirement": ">= 5.1.0" },
