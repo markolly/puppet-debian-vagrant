@@ -28,4 +28,9 @@ describe 'vagrant::base' do
       notify: 'Exec[update timezone]'
     )
   end
+  ['htop','tree','unzip','vim'].each do |x| it { 
+    should contain_package(x)
+      .with(ensure: 'present')
+    }
+  end
 end
