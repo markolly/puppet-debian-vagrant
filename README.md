@@ -4,7 +4,7 @@ Puppet module to provide initial configuration for Debian based Vagrant boxes ru
 ## Installation
 ```
 git clone git@github.com:markolly/puppet-debian_vagrant.git
-cd puppet-debian-vagrant.git
+cd puppet-debian_vagrant.git
 bundle
 ln -s ../../scripts/pre-commit.sh .git/hooks/pre-commit
 chmod +x .git/hooks/pre-commit
