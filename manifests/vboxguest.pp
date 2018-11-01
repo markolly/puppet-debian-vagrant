@@ -1,8 +1,8 @@
-# == Class: vagrant::vboxguest
+# == Class: debian_vagrant::vboxguest
 #
 # Download and install VBox Guest Additions
 #
-class vagrant::vboxguest {
+class debian_vagrant::vboxguest {
 
   include wget
   

@@ -1,5 +1,5 @@
 require 'spec_helper'
-describe 'vagrant::ssh' do
+describe 'debian_vagrant::ssh' do
   let(:facts) do
     {
       kernel: 'Linux',
@@ -9,7 +9,7 @@ describe 'vagrant::ssh' do
       osfamily: 'Debian'
     }
   end
-  it { should contain_class('vagrant::ssh') }
+  it { should contain_class('debian_vagrant::ssh') }
   it { should compile }
   it { should contain_file('/etc/ssh/sshd_config') }
   it do

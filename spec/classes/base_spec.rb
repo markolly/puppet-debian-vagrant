@@ -1,5 +1,5 @@
 require 'spec_helper'
-describe 'vagrant::base' do
+describe 'debian_vagrant::base' do
   let(:facts) do
     {
       kernel: 'Linux',
@@ -9,7 +9,7 @@ describe 'vagrant::base' do
       osfamily: 'Debian'
     }
   end
-  it { should contain_class('vagrant::base') }
+  it { should contain_class('debian_vagrant::base') }
   it { should compile }
   it do
     should contain_exec('apt update')

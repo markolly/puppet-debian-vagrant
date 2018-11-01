@@ -1,5 +1,5 @@
 require 'spec_helper'
-describe 'vagrant::vboxguest' do
+describe 'debian_vagrant::vboxguest' do
   let(:facts) do
     {
       kernel: 'Linux',
@@ -9,7 +9,7 @@ describe 'vagrant::vboxguest' do
       osfamily: 'Debian'
     }
   end
-  it { should contain_class('vagrant::vboxguest') }
+  it { should contain_class('debian_vagrant::vboxguest') }
   it { should compile }
   it do
     should contain_exec('Ensure correct kernel headers are installed')

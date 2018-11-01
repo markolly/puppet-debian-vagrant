@@ -1,8 +1,8 @@
-# == Class: vagrant::ssh
+# == Class: debian_vagrant::ssh
 #
 # Configure SSH and install Vagrant SSH key
 #
-class vagrant::ssh {
+class debian_vagrant::ssh {
 
   include wget
   

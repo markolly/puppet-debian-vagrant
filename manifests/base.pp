@@ -1,8 +1,8 @@
-# == Class: base
+# == Class: debian_vagrant::base
 #
 # Performs initial configuration tasks for Debian Vagrant boxes.
 #
-class vagrant::base {
+class debian_vagrant::base {
 
   Exec { path => [ '/bin/', '/sbin/' , '/usr/bin/', '/usr/sbin/' ] }
 
