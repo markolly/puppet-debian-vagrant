@@ -10,7 +10,7 @@ ln -s ../../scripts/pre-commit.sh .git/hooks/pre-commit
 chmod +x .git/hooks/pre-commit
 ```
 
-To bypass pre-commit git hook tests run commits with the --no-verify option or -n flag.
+To bypass pre-commit git hook tests run commits with the --no-verify option or -n flag. This is particularly useful when making changes to tests.
 
 ```
 git commit -nm "Commit message"
