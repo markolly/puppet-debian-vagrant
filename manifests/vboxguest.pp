@@ -34,8 +34,11 @@ class debian_vagrant::vboxguest {
                 /media/VBoxGuestAdditions",
   }
   -> exec { 'Install VBoxGuestAdditions':
-    command => 'sh /media/VBoxGuestAdditions/VBoxLinuxAdditions.run',
-    returns => 2,
+    command => 'sh /media/VBoxGuestAdditions/VBoxLinuxAdditions.run || true',
+  }
+  -> exec { 'Check VBoxGuestAdditions':
+    command => '/bin/true',
+    onlyif  => '/usr/bin/test -e /lib/modules/$(uname -r)/misc/vboxsf.ko',
   }
   -> file { "/home/vagrant/VBoxGuestAdditions_${virtualbox_version}.iso":
     ensure => 'absent',

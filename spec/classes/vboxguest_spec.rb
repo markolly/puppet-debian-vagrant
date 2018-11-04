@@ -35,8 +35,14 @@ describe 'debian_vagrant::vboxguest' do
   it do
     should contain_exec('Install VBoxGuestAdditions')
       .with(
-        command: 'sh /media/VBoxGuestAdditions/VBoxLinuxAdditions.run',
-        returns: 2
+        command: 'sh /media/VBoxGuestAdditions/VBoxLinuxAdditions.run || true'
+      )
+  end
+  it do
+    should contain_exec('Check VBoxGuestAdditions')
+      .with(
+        command: '/bin/true',
+        onlyif: '/usr/bin/test -e /lib/modules/$(uname -r)/misc/vboxsf.ko'
       )
   end
   it do
