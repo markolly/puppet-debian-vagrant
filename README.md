@@ -38,9 +38,7 @@ As an example for Ubuntu 18.04, these files should at minimum contain:
 
 **puppet/manifests/default.pp**:
 
-    include debian_vagrant::base
     include debian_vagrant::ssh
-    include debian_vagrant::vboxguest
 
 ## Packer Ubuntu 18.04 Example 
 An example Packer build configuration to install Ubuntu 18.04 using Puppet for Virtualbox:
