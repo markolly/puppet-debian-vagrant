@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'spec_helper'
 describe 'debian_vagrant::ssh' do
   let(:facts) do
